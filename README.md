@@ -99,3 +99,11 @@
 **min/style.css**
 
     .mixin,body{margin:0;background-color:#ff6}
+    
+##Watch tasks
+
+    gulp.task('watch', function() {
+      gulp.watch('less/style.less', ['less']);
+    });
+
+> You can also create a watch task by providing the paths to the files you want to watch and either a callback or array of `Strings` reperesenting the tasks you want to run when those files are changed.

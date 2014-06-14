@@ -10,3 +10,7 @@ gulp.task('less', function() {
     .pipe(gulp.dest('min'));
 
 });
+
+gulp.task('watch', function() {
+  gulp.watch('less/style.less', ['less']);
+});
