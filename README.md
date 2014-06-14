@@ -138,4 +138,11 @@
 ###gulp-notify
 > Provides growl notifications.
 
+## Default task
+> You can bind the functions to run by default with gulp.task('default).
+
+    gulp.task('default'. ['tasks', 'here'])
+
+
+
 

@@ -17,3 +17,5 @@ gulp.task('less', function() {
 gulp.task('watch', function() {
   gulp.watch('less/style.less', ['less']);
 });
+
+gulp.task('default', ['less', 'watch']);
