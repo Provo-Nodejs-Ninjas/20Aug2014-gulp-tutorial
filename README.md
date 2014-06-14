@@ -107,3 +107,17 @@
     });
 
 > You can also create a watch task by providing the paths to the files you want to watch and either a callback or array of `Strings` reperesenting the tasks you want to run when those files are changed.
+
+##Error handling
+> When a module throws an error, it will emit an `error` event, which is caught by `pipe` and will stop the process.
+
+> This is rather annoying, especially when you have a watch task running, and will end up having to restart the task every time you have an error.
+
+**gulpfile.js**
+
+    ...
+    .pipe(less())
+      .on('error', function(error) {
+        // Handle the error
+      })
+    ...
