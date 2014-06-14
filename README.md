@@ -64,3 +64,38 @@
 **min/style.css**
 
     body{margin:0}
+    
+##Combine plugins
+> One of the best things about Gulp is that you can combine plugins to make more complicated tasks.
+
+    $ npm install -D gulp-less
+    
+**gulpfile.js**
+
+    var gulp = require('gulp'),
+        minify = require('gulp-minify-css'),
+        less = require('gulp-less');
+
+    gulp.task('less', function() {
+
+      gulp.src('less/style.less')
+        .pipe(less())
+        .pipe(minify())
+        .pipe(gulp.dest('min'));
+
+    });
+
+**less/style.less**
+
+    .mixin {
+      margin: 0;
+      background-color: lighten(yellow, 20%);
+    }
+
+    body {
+      .mixin();
+    }
+
+**min/style.css**
+
+    .mixin,body{margin:0;background-color:#ff6}

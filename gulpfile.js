@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
-    minify = require('gulp-minify-css');
+    minify = require('gulp-minify-css'),
+    less = require('gulp-less');
 
-gulp.task('css', function() {
+gulp.task('less', function() {
 
-  gulp.src('css/style.css')
+  gulp.src('less/style.less')
+    .pipe(less())
     .pipe(minify())
     .pipe(gulp.dest('min'));
 
