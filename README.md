@@ -121,3 +121,14 @@
         // Handle the error
       })
     ...
+
+###gulp-plumber
+> A plugin that makes error hanlding simpler. Pipe your files into this plugin first before putting it through the other plugins. This will let you define a single error handler for each step of your task.
+
+    ...
+    gulp.src('less/style.less')
+      .pipe(plumber())
+      .pipe(less())
+      .pipe(minify())
+      .pipe(gulp.dest('min'));
+    ...
