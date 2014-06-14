@@ -132,3 +132,10 @@
       .pipe(minify())
       .pipe(gulp.dest('min'));
     ...
+
+## Notifications
+
+###gulp-notify
+> Provides growl notifications.
+
+
