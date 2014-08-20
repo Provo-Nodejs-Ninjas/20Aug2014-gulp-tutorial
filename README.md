@@ -1,4 +1,5 @@
-#Gulp Tutorial
+![Gulp Logo](https://raw2.github.com/gulpjs/artwork/master/gulp-2x.png)
+#Gulp - Build Automation
 
 ##Install
  
@@ -49,7 +50,7 @@
 
 
 ###gulp.src(globs[, options])
-> Takes a glob and represents a file structure. Can be piped to plugins.
+> Takes a glob and represents a file structure. Can be piped to plugins. (normally a `String` with a file path source)
 
 **css/style.css**
 
@@ -123,7 +124,7 @@
     ...
 
 ###gulp-plumber
-> A plugin that makes error hanlding simpler. Pipe your files into this plugin first before putting it through the other plugins. This will let you define a single error handler for each step of your task.
+> A plugin that makes error handling simpler. Pipe your files into this plugin first before putting it through the other plugins. This will let you define a single error handler for each step of your task.
 
     ...
     gulp.src('less/style.less')
